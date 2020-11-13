@@ -7,7 +7,7 @@ const authkey='OEIDkG6msYquVZXRoO4v24mfhCwNPzZ9';
 const ExchangeRateContextValue={
     data: [],
     date: '2020-11-13',
-    setDate:()=>{};
+    setDate:()=>{},
     getCurrencyDetail:()=>{},
 }
 
