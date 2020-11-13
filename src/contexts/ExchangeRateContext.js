@@ -6,6 +6,8 @@ const authkey='OEIDkG6msYquVZXRoO4v24mfhCwNPzZ9';
 
 const ExchangeRateContextValue={
     data: [],
+    date: '2020-11-13',
+    setDate:()=>{};
     getCurrencyDetail:()=>{},
 }
 
@@ -14,6 +16,8 @@ export const ExchangeRateContext=createContext(ExchangeRateContextValue);
 
 export function ExchangeRateContextProvider(props){
     const[data, setData]=useState([]);
+    const[data, setData]=useState('2020-11-13');
+
 
     useEffect(()=>{ 
         fetch(
@@ -28,7 +32,7 @@ export function ExchangeRateContextProvider(props){
             setData(responseJSON);
           });
      
-      }, []);
+      }, [data]);
 
       const getCurrencyDetailByUnit=useCallback(code=>{
         const matchedCurrency = data.filter(currency=>{
@@ -44,6 +48,7 @@ export function ExchangeRateContextProvider(props){
       return (
         <ExchangeRateContext.Provider 
             value={{
+                data,
                 data,
                 setData,  }          
             }>

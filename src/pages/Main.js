@@ -17,9 +17,15 @@ function Main(props){
     
     return (
         <div>
+          <input 
+          type={'date'}
+          value={exchangeRateContext.date}
+          onChange={event=>exchangeRateContext.setDate()}
+          
+          />
           <div>
             개발중
-          ㅋ
+          made by seongeunPark
           </div>
             {exchangeRateContext.data.map((currency, cI)=>{
             return(
