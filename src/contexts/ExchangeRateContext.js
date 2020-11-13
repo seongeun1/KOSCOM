@@ -16,7 +16,7 @@ export const ExchangeRateContext=createContext(ExchangeRateContextValue);
 
 export function ExchangeRateContextProvider(props){
     const[data, setData]=useState([]);
-    const[data, setData]=useState('2020-11-13');
+    const[date, setDate]=useState('2020-11-13');
 
 
     useEffect(()=>{ 
