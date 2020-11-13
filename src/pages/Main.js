@@ -17,6 +17,10 @@ function Main(props){
     
     return (
         <div>
+          <div>
+            개발중
+          ㅋ
+          </div>
             {exchangeRateContext.data.map((currency, cI)=>{
             return(
               <div key={cI}>
